@@ -1,5 +1,5 @@
 <?php
-Class DbConnect 
+Class dbConnect 
 {
 	protected $db;
 	public function __construct()
