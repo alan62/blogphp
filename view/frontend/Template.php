@@ -15,12 +15,6 @@ if (empty($_SESSION['id'])) {
     <meta name="description" content="<?= htmlspecialchars($metaDescription) ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- meta réseaux sociaux -->
-    <meta name="twitter:card" content="summary" />
-    <meta property="og:url" content="<?= $ogUrl ?>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="<?= $ogTitle ?>" />
-    <meta property="og:description" content="<?= htmlspecialchars($ogDescription) ?>" />
     <!-- règles CSS et CDN -->
     <link rel="stylesheet" href="public/css/frontend.css">
     <link href="https://fonts.googleapis.com/css?family=Exo:300,400,700|Pacifico&display=swap" rel="stylesheet">
@@ -69,7 +63,7 @@ if (empty($_SESSION['id'])) {
                     </li>
                     <?php if ($connected) { ?>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#"><span class="fas fa-user-circle"></span> Admin</a>
+                            <a class="nav-link text-black text-uppercase" href="#"><span class="fas fa-user-circle"></span> Admin</a>
                         </li>
                     <?php
                 }
@@ -80,10 +74,10 @@ if (empty($_SESSION['id'])) {
 
         <?= $content ?>
 
-        <footer>
+        <footer class="footer bg-info" >
             <div class="container">
                 <div class="row">
-                    <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-4 offset-md-0">
+                    <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase">Plan du site</h5>
                         <div>
                             <a href="#" class="text-white">Accueil</a><br />
@@ -92,7 +86,7 @@ if (empty($_SESSION['id'])) {
                             <a href="#" class="text-white">Contact</a>
                         </div>
                     </div>
-                    <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-4 offset-md-0">
+                    <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase">Admin</h5>
                         <div>
                             <a href="#" class="text-white">Se connecter</a>
