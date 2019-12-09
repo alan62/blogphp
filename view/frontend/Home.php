@@ -22,18 +22,24 @@ ob_start();
 
 <section id="home-project-alaska">
     <div class="row mb-2">
-    <div class="col-md-6">
+    <div class="col-md-4 offset-1">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
             <h3 class="mb-0">Chapitres en ligne</h3>
+            <ul>
+                <li>Chapitre 1</li>
+                <li>Chapitre 2</li>
+                <li>Chapitre 3</li>
+                <li>Chapitre 4</li>
+            </ul>
             <p class="card-text mb-auto">Chaque chapitre du roman sera publié en ligne.</p>
         </div>
-        <div class="col-auto d-none d-lg-block">
+        <div class="col d-none d-lg-block">
             <img class="img1 rounded-circle" src="http://alanbeaucheron.ovh/projet4/public/images/roman-en-ligne.jpg" alt="romanenligne">
         </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4 offset-2">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
             <h3 class="mb-0">Intéraction</h3>
