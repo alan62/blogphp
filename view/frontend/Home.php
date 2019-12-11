@@ -1,11 +1,8 @@
 <?php
-/* variables à remplir */
 $title = 'Accueil';
 $metaDescription = "Bienvenue sur le site web de Jean Forteroche, écrivain. Découvrez son nouveau roman \"Billet simple pour l'Alaska\", publié en ligne.";
 $ogUrl = 'https://alanbeaucheron.ovh/projet4/';
-/* No more 65 words */
 $ogTitle = 'Bienvenue sur le site web de Jean Forteroche';
-/* 150-200 words */
 $ogDescription = "Découvrez en ligne les chapitres du nouveau roman de Jean Forteroche, \"Billet simple pour l'Alaska\".";
 /* début de la variable $content */
 ob_start();
