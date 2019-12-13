@@ -10,7 +10,7 @@ ob_start();
 ?>
 
 <header id="billet-header">
-    <div class="container">
+    <div class="container bg-info">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="display-4 main-title text-center text-white d-inline-block position-relative">Billet simple pour l'Alaska</h1>
