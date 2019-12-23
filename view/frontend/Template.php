@@ -46,7 +46,7 @@ if (empty($_SESSION['id'])) {
     <div id="bloc-page">
         <nav id="navbar-example2" class="navbar navbar-expand bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand text-white-50 text-uppercase" href="#">Jean Forteroche</a>
+                <a class="navbar-brand text-white-50 text-uppercase" href="/view/frontend/home.php">Jean Forteroche</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
                 <ul class="nav collapse navbar-collapse flex-sm-column flex-md-row justify-content-md-end align-items-sm-start" id="navbarToggler">
                     <li class="nav-item">
@@ -80,10 +80,10 @@ if (empty($_SESSION['id'])) {
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase">Plan du site</h5>
                         <div>
-                            <a href="#" class="text-white">Accueil</a><br/>
-                            <a href="#" class="text-white">Biographie</a><br/>
-                            <a href="#" class="text-white">Billet Simple</a><br/>
-                            <a href="#" class="text-white">Contact</a>
+                            <a href="/view/frontend/home.php" class="text-white">Accueil</a><br/>
+                            <a href="/view/frontend/biographie.php" class="text-white">Biographie</a><br/>
+                            <a href="/view/frontend/billetSimple.php" class="text-white">Billet Simple</a><br/>
+                            <a href="/view/frontend/contact.php" class="text-white">Contact</a>
                         </div>
                     </div>
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
