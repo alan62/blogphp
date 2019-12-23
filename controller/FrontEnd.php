@@ -10,5 +10,13 @@ class frontend
     public function billetSimple() {
         require ('view/frontend/billetSimple.php');
     }
+
+    public function biographie() {
+        require ('view/frontend/biographie.php');
+    }
+
+    public function contact() {
+        require ('view/frontend/contact.php');
+    }
     
 }
