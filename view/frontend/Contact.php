@@ -86,5 +86,3 @@ $content = ob_get_clean(); // fin du contenu de la variable $content
 // appel du template
 require 'template.php';
 ?>
-
-
