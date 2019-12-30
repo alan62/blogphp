@@ -25,5 +25,5 @@ ob_start();
 <?php
 $content = ob_get_clean(); // fin du contenu de la variable $content 
 // appel du template
-require 'frontend.php';
+require 'template.php';
 ?>
