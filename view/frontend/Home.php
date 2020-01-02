@@ -21,18 +21,27 @@ ob_start();
     <div class="row mb-2">
     <div class="col-md-4 offset-1">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0">Chapitres en ligne</h3>
-            <ul>
-                <li>Chapitre 1</li>
-                <li>Chapitre 2</li>
-                <li>Chapitre 3</li>
-                <li>Chapitre 4</li>
-            </ul>
+            <p class="lead text-justify">Retrouvez l'ensemble des chapitres qui compose le roman "Billet simple pour l'Alaska", par ordre de publication.<br />
+                <br />
+                <u>Le résumé</u> : Deux amis décident de visiter l'Alaska. Si vous souhaitez en savoir plus je vous invite à lire les chapitres.<br />
+                <br />
+                Bonne lecture !</p>
+            <hr>
+            <?php foreach ($articles as $article) { ?>
+                <article class="mb-5 mt-5">
+                    <h3><?= $article->getTitle() ?></h3>
+                    <p>Publié le <?= date_format(date_create($article->getDate()), 'd/m/Y')  ?></p>
+                    <div class="text-justify"><?= substr($article->getContent(), 0, 250) ?>[...]</div>
+                    <a href="index.php?action=view&id=<?= $article->getId() ?>" title="Lire la suite de l'article" class="btn btn-info mb-2" role="button">Lire la suite</a>
+                    <hr>
+                </article>
             <p class="card-text mb-auto">Chaque chapitre du roman sera publié en ligne.</p>
         </div>
         <div class="col d-none d-lg-block">
             <img class="img1 rounded-circle" src="http://alanbeaucheron.ovh/projet4/public/images/roman-en-ligne.jpg" alt="romanenligne">
+         <?php
+            }
+            ?>
         </div>
         </div>
     </div>
@@ -50,10 +59,8 @@ ob_start();
   </div>
 </section>
 
-
-
 <?php
 $content = ob_get_clean(); // fin du contenu de la variable $content
 // appel du template
-require 'template.php';
+require 'Template.php';
 ?>

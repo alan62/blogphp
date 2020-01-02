@@ -1,5 +1,5 @@
 <?php
-class frontend
+class Frontend
 {
     
     public function home() // chaque page devient une méthode
