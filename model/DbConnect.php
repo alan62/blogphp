@@ -1,8 +1,8 @@
 <?php
-Class dbConnect 
+Class DbConnect 
 {
 	protected $db;
-	public function __construct()
+	public function log()
 	{
 	    try
 	    { //nom de la base de donnée projet4 
