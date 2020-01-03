@@ -4,7 +4,7 @@ class Article {
     private $id;
     private $title;
     private $content;
-    private $date;
+    private $date_creation;
     private $date_update;
 
 
@@ -28,9 +28,9 @@ class Article {
         {
             $this->setContent($data['content']);
         }
-        if (isset($data['date']))
+        if (isset($data['date_creation']))
         {
-            $this->setDate($data['date']);
+            $this->setDate_creation($data['date_creation']);
         }
         if (isset($data['date_update']))
         {
@@ -52,9 +52,9 @@ class Article {
     {
         return $this->content;
     }
-    public function getDate()
+    public function getDate_creation()
     {
-        return $this->date;
+        return $this->date_creation;
     }
     public function getDate_update()
     {
@@ -78,9 +78,9 @@ class Article {
         $this->content = htmlspecialchars_decode($content); //  Afin de convertir les entités spéciales en caractères 
         return $this;
     }
-    public function setDate($date)
+    public function setDate_creation($date_creation)
     {
-        $this->date = $date;
+        $this->date_creation = $date_creation;
         return $this;
     }
     public function setDate_update($date_update)

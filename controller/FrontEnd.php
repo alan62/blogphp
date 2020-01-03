@@ -1,9 +1,12 @@
 <?php
 class Frontend
 {
-    
-    public function home() // chaque page devient une méthode
+    // chaque page devient une méthode
+    public function home() 
     {
+        $articleManager = new ArticleManager();
+        // récupère les articles publiés, par ordre d'apparition
+        $articles = $articleManager->getPosted();
         require ('view/frontend/home.php');
     }
 
@@ -19,4 +22,9 @@ class Frontend
         require ('view/frontend/contact.php');
     }
     
+    public function view()
+    {
+        $articleManager = new ArticleManager(); // création de l'Article Manager pour centraliser toutes les requêtes
+        require('view/frontend/view.php');
+    }
 }

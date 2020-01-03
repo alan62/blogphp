@@ -5,9 +5,18 @@
 }
 
 #home-header {
-    margin: 70px;
+    margin-top: 30px;
+    margin-right: 80px;
+    margin-left: 80px;
 }
 
-.img1, .img2 {
-    width: 300px;
+#bloc-page {
+    background-image: url(https://alanbeaucheron.ovh/projet4/public/images/fond.jpg);
+    background-size: cover;
+}
+
+article, p {
+    background-color: white !important;
+    padding: 5px;
+    border-radius: 15px;
 }

@@ -16,7 +16,7 @@ if (empty($_SESSION['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- règles CSS et CDN -->
-    <link rel="stylesheet" href="public/css/frontend.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Exo:300,400,700|Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -55,12 +55,6 @@ if (empty($_SESSION['id'])) {
                     <li class="nav-item">
                         <a class="nav-link text-white text-uppercase" href="#">Biographie</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white text-uppercase" href="#">Billet simple</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white text-uppercase" href="#">Contact</a>
-                    </li>
                     <?php if ($connected) { ?>
                         <li class="nav-item">
                             <a class="nav-link text-black text-uppercase" href="#"><span class="fas fa-user-circle"></span> Admin</a>
@@ -74,20 +68,18 @@ if (empty($_SESSION['id'])) {
 
         <?= $content ?>
 
-        <footer class="footer bg-info" >
+        <footer class="footer bg-dark" >
             <div class="container">
                 <div class="row">
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
-                        <h5 class="text-uppercase">Plan du site</h5>
+                        <h5 class="text-uppercase text-white">Plan du site</h5>
                         <div>
                             <a href="/view/frontend/home.php" class="text-white">Accueil</a><br/>
                             <a href="/view/frontend/biographie.php" class="text-white">Biographie</a><br/>
-                            <a href="/view/frontend/billetSimple.php" class="text-white">Billet Simple</a><br/>
-                            <a href="/view/frontend/contact.php" class="text-white">Contact</a>
                         </div>
                     </div>
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
-                        <h5 class="text-uppercase">Admin</h5>
+                        <h5 class="text-uppercase text-white">Admin</h5>
                         <div>
                             <a href="#" class="text-white">Se connecter</a>
                         </div>
