@@ -7,24 +7,38 @@ class Frontend
         $articleManager = new ArticleManager();
         // récupère les articles publiés, par ordre d'apparition
         $articles = $articleManager->getPosted();
-        require ('view/frontend/home.php');
+        require ('view/frontend/Home.php');
     }
 
     public function billetSimple() {
-        require ('view/frontend/billetSimple.php');
+        require ('view/frontend/BilletSimple.php');
     }
 
     public function biographie() {
-        require ('view/frontend/biographie.php');
+        require ('view/frontend/Biographie.php');
     }
 
     public function contact() {
-        require ('view/frontend/contact.php');
+        require ('view/frontend/Contact.php');
     }
     
     public function view()
-    {
-        $articleManager = new ArticleManager(); // création de l'Article Manager pour centraliser toutes les requêtes
-        require('view/frontend/view.php');
+    {   
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+            $articleManager = new ArticleManager(); // création de l'Article Manager pour centraliser toutes les requêtes
+            $commentManager = new CommentManager(); // création du Comment Manager pour centraliser toutes les requêtes
+            if ($articleManager->exists($_GET['id']))
+            {   
+                $article = $articleManager->get($_GET['id']);
+                $comments = $commentManager->getPosted($_GET['id']);
+                require('view/frontend/View.php');
+            }
+            else {
+                home();
+            }
+        }
+        else {
+            home();
+        }
     }
 }

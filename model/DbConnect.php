@@ -14,11 +14,4 @@ Class DbConnect
 	        die('Erreur : '.$e->getMessage());
 	    }
 	}
-	 function dbConnect() 
-	 {  
-       if ($this->db instanceof PDO) 
-       		{
-            	return $this->db;
-       		}
-     }
 }

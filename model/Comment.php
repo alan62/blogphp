@@ -3,7 +3,7 @@ class Comment
 {
     private $id;
     private $comment;
-    private $date;
+    private $date_comment;
     private $report;
     private $date_report;
     private $id_article;
@@ -33,9 +33,9 @@ class Comment
         {
             $this->setComment($data['comment']);
         }
-        if (isset($data['date']))
+        if (isset($data['date_comment']))
         {
-            $this->setDate($data['date']);
+            $this->setDate($data['date_comment']);
         }
         if (isset($data['report']))
         {
@@ -69,9 +69,9 @@ class Comment
     {
         return $this->comment;
     }
-    public function getDate()
+    public function getDate_comment()
     {
-        return $this->date;
+        return $this->date_comment;
     }
     public function getReport()
     {
@@ -108,9 +108,9 @@ class Comment
         $this->comment = htmlspecialchars($comment);
         return $this;
     }
-    public function setDate($date)
+    public function setDate($date_comment)
     {
-        $this->date = $date;
+        $this->date_comment = $date_comment;
         return $this;
     }
     public function setReport($report)

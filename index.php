@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 // routeur de notre projet
 session_start();
 // enregistre l'autoload
@@ -27,44 +29,36 @@ if (isset($_GET['action']))
     }
     elseif ($_GET['action'] == 'biographie')
     {
-        $frontend->biographie();
-    }
-    elseif ($_GET['action'] == 'billetSimple')
-    {
-        $frontend->billetSimple();
-    }
-    elseif ($_GET['action'] == 'contact')
-    {
-        $frontend->contact();
+        $frontend->Biographie();
     }
     elseif ($_GET['action'] == 'login')
     {
-        $frontend->login();
+        $frontend->Login();
     }
     elseif ($_GET['action'] == 'view')
     {
-        $frontend->view();
+        $frontend->View();
     }
     // BACKEND
     elseif ($_GET['action'] == 'admin')
     {
-        $backend->admin();
+        $backend->Admin();
     }
     elseif ($_GET['action'] == 'newArticle')
     {
-        $backend->newArticle();
+        $backend->NewArticle();
     }
     elseif ($_GET['action'] == 'updateArticle')
     {
-        $backend->updateArticle();
+        $backend->UpdateArticle();
     }
     // page error 404
     else {
-        $frontend->error();
+        $frontend->Error();
     }
 }
 else
 {
     // pas d'action, on exécute la page d'accueil
-    $frontend->home();
+    $frontend->Home();
 }
