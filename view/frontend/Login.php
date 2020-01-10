@@ -9,8 +9,7 @@ ob_start();
 ?>
 
 <section id="login-form">
-
-    <div class="container">
+     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 login-content pb-5 px-5">
                 <form id="form-login" action="index.php?action=login" method="post">
@@ -32,7 +31,6 @@ ob_start();
             </div>
         </div>
     </div>
-
 </section>
 
 <?php
