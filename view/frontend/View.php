@@ -15,8 +15,8 @@ ob_start();
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="display-4 main-title text-center text-white d-inline-block position-relative">Billet simple pour l'Alaska</h1>
-                <h2 class="text-center text-white text-break"><?= $article->getTitle() ?></h2>
+                <h1 class="display-4 main-title text-center text-black d-inline-block position-relative"><strong>Billet simple pour l'Alaska</strong></h1>
+                <h2 class="text-center text-black text-break"><?= $article->getTitle() ?></h2>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@ ob_start();
         <div class="row">
             <div class="col-lg-10 offset-lg-1 mb-5 mt-5">
                 <h5 class="text-center mt-4 mb-5 text-white">Commentaires</h5>
-                <?php if (empty($comments)) { ?><p class="text-center text-white">Pas de commentaires à afficher. Laissez le vôtre !</p><?php } ?>
+                <?php if (empty($comments)) { ?><p class="text-center text-black">Pas de commentaires à afficher. Laissez le vôtre !</p><?php } ?>
                 <?php foreach ($comments as $comment) { ?>
                     <div class="comment <?php if ($comment->getReport() > 0) { ?> reported<?php } ?>">
                         <div class="row">
@@ -65,6 +65,10 @@ ob_start();
                     <div class="form-group">
                         <label for="form-pseudo" class="text-white">Votre pseudo <span>(moins de 255 caractères)</span></label>
                         <input type="text" class="form-control" name="form-pseudo" id="form-pseudo" placeholder="Pseudo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email" class="text-white">Email</label>
+                        <input type="text" class="form-control" name="form-email" id="form-email" placeholder="Email" required></input>
                     </div>
                     <div class="form-group">
                         <label for="form-comment" class="text-white mt-2">Votre commentaire</label>

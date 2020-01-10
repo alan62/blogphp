@@ -11,8 +11,8 @@ ob_start();
 <header id="home-header">
     <div class="jumbotron p-4 p-md-5 text-black rounded bg-transparent">
     <div class="col-md-12">
-      <h1 class="display-4 font-italic text-center"><strong>Un billet pour Alaska</strong></h1>
-      <p class="lead my-3 text-center"><strong>Sur ce site vous aurez la possibilité de lire le roman chapitre par chapitre tout en ayant la possibilité de me donner votre ressenti par commentaire ou via le formulaire de contact.</strong></p>
+      <h1 class="display-4 text-center"><strong>Billet simple pour l'Alaska</strong></h1>
+      <p class="lead my-3 text-center"><strong>Sur ce site vous aurez la possibilité de lire le roman chapitre par chapitre tout en ayant la possibilité de me donner votre ressenti par commentaire.</strong></p>
     </div>  
   </div>
 </header>
