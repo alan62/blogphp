@@ -46,6 +46,18 @@ article, p {
 }
 
 
+/* Login */ 
+
+ #login-form {
+     height: 936px;
+     padding-top: 15%;
+}
+
+#form-login > .form-group {
+    text-transform: uppercase;
+}
+
+
 /* footer */
 
 .footer {
