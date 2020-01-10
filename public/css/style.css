@@ -17,6 +17,37 @@
 
 article, p {
     background-color: white !important;
-    padding: 5px;
+    padding: 10px;
     border-radius: 15px;
+}
+
+
+
+
+/* Formulaire de contact */
+
+#comments {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#comment-form {
+    padding-bottom: 30px;
+}
+
+#view-article {
+    margin-right: 120px;
+    margin-left: 120px;
+}
+
+#view-header > .container {
+
+    margin-top:55px;
+}
+
+
+/* footer */
+
+.footer {
+    padding-top: 15px;
 }
