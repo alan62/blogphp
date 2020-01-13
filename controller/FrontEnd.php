@@ -22,7 +22,11 @@ class Frontend
         require ('view/frontend/Contact.php');
     }
 
-     public function login() {
+    public function error() {
+        require ('view/frontend/Error.php');
+    }
+
+    public function login() {
 
         $error = null;
         if (!empty($_POST)) { // si l'utilisateur a envoyé le formulaire

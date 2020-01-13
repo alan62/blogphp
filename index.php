@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(E_ALL); // rapporte toutes les erreurs php
 ini_set("display_errors", 1);
 // routeur de notre projet
 session_start();
@@ -53,7 +53,8 @@ if (isset($_GET['action']))
         $backend->UpdateArticle();
     }
     // page error 404
-    else {
+    else 
+    {
         $frontend->Error();
     }
 }
