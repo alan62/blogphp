@@ -39,6 +39,10 @@ if (isset($_GET['action']))
     {
         $frontend->View();
     }
+    elseif ($_GET['action'] == 'inscription')
+    {
+        $frontend->Inscription();
+    }
     // BACKEND
     elseif ($_GET['action'] == 'admin')
     {
