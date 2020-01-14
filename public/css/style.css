@@ -65,6 +65,16 @@ article, p {
     padding-top: 15%;
 }
 
+
+/* Inscription */ 
+
+#inscription-form {
+    height: 936px;
+    padding-top: 10%;
+}
+
+
+
 /* footer */
 
 .footer {

@@ -3,9 +3,7 @@
 $title = htmlspecialchars($article->getTitle());
 $metaDescription = "Plongez dans l'un des chapitres du nouveau roman interactif de Jean Forteroche, intitulé \"Billet simple pour l'Alaska\" et publié en ligne.";
 $ogUrl = 'https://alan.beaucheron.ovh/projet4/index.php?action=view$id=' . $article->getId();
-/* No more 65 words */
 $ogTitle = htmlspecialchars($article->getTitle()) .  " | Le site officiel de Jean Forteroche";
-/* 150-200 words */
 $ogDescription = "Plongez dans l'un des chapitres du nouveau roman interactif de Jean Forteroche, intitulé \"Billet simple pour l'Alaska\" et publié en ligne.";
 /* début de la variable $content */
 ob_start();
@@ -75,7 +73,7 @@ ob_start();
                         <textarea class="form-control" name="form-comment" id="form-comment" rows="3" placeholder="Commentaire" required></textarea>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <button type="submit" class="btn btn-primary mt-4 px-4">Envoyer</button>
+                        <button type="submit" class="btn btn-info mt-4 px-4">Envoyer</button>
                     </div>
                 </form>
             </div>
