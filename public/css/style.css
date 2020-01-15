@@ -4,6 +4,7 @@
     box-sizing: border-box;  
 }
 
+/* HOME  */
 #home-header {
     margin-top: 30px;
     margin-right: 80px;
@@ -20,7 +21,6 @@ article, p {
     padding: 10px;
     border-radius: 15px;
 }
-
 
 
 
@@ -43,6 +43,26 @@ article, p {
 #view-header > .container {
 
     margin-top:55px;
+}
+
+
+/*  BIOGRAPHIE  */
+
+.container-fluid > .row > .col-5 > .img-fluid {
+
+    padding-top: 10%;
+}
+
+
+#biographie-header {
+    padding-top: 65px;
+}
+
+#biographie-article {
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 6%;
+    margin-top: 2%;
 }
 
 

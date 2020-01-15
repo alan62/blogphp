@@ -12,8 +12,8 @@ ob_start();
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="display-4 main-title text-center text-white d-inline-block position-relative">Jean Forteroche</h1>
-                <h2 class="text-center text-white">Écrivain facétieux, saltimbanque des mots</h2>
+                <h1 class="display-4 main-title text-center text-black d-inline-block position-relative"><strong>Jean Forteroche</strong></h1>
+                <h2 class="text-center text-black">Écrivain facétieux, saltimbanque des mots</h2>
             </div>
         </div>
     </div>
@@ -22,14 +22,14 @@ ob_start();
 <article id="biographie-article">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6 offset-3 col-sm-4 offset-sm-4 col-md-3 offset-md-1 text-justify article-picture">
-                <img src="/public/images/jean.png" class="img-fluid" alt="Photo de Jean Forteroche" />
+            <div class="col-5 offset-3 col-sm-4 offset-sm-2 col-md-2 offset-md-5 article-picture">
+                <img src="https://alanbeaucheron.ovh/projet4/public/images/jean.png" class="img-fluid" alt="Photo de Jean Forteroche" />
             </div>
         </div>
     </div>
     <div class="container-fluid bg-white pt-5 pb-5">
         <div class="row">
-            <div class="pt-4 pt-md-5 col-10 offset-1 col-md-6 offset-md-5 text-justify article-content text-reader">
+            <div class="pt-5 pt-md-3 col-5 offset-1 col-md-6 offset-md-3 text-justify article-content text-reader">
                 Il est de notoriété publique que Jean Forteroche n'aime guère parler de lui, qui plus est à la troisième personne du singulier.<br />
                 Seulement, dans la mesure où la page que vous parcourez s'intitule sobrement "Biographie", nous serions bien embêtés si je décidais de ne pas honorer le contrat qui vous a précisément amené ici. J'en suis tout à fait capable, n'en doutez pas, cher lecteur avisé. Et je pourrais continuer des heures durant à deviser sur le bien-fondé de ma pudeur, ou encore sur le fameux contrat qui m'oblige à temporairement la souiller. <br />
                 C'est pour cette raison que je m'adresserai à vous comme je m'adresserai à un vieil ami. On a plus grand chose à cacher à un vieil ami, si ce n'est cette part de mystère qui vous rend irrésistiblement intéressant. Car celui qui aime parler de lui suscitera très vite le désintérêt, et celui qui ne dit rien, l'ennui. Distribuer avec minutie les parcelles de son histoire, c'est bien là tout l'art de l'écrivain.<br />
