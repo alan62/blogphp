@@ -46,14 +46,14 @@ if (empty($_SESSION['id'])) {
     <div id="bloc-page">
         <nav id="navbar-example2" class="navbar navbar-expand bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand text-white-50 text-uppercase" href="/view/frontend/home.php">Jean Forteroche</a>
+                <a class="navbar-brand text-white-50 text-uppercase" href="index.php?action=home">Jean Forteroche</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
                 <ul class="nav collapse navbar-collapse flex-sm-column flex-md-row justify-content-md-end align-items-sm-start" id="navbarToggler">
                     <li class="nav-item">
-                        <a class="nav-link text-white text-uppercase" href="#">Accueil</a>
+                        <a class="nav-link text-white text-uppercase" href="index.php?action=home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white text-uppercase" href="#">Biographie</a>
+                        <a class="nav-link text-white text-uppercase" href="index.php?action=biographie">Biographie</a>
                     </li>
                     <?php if ($connected) { ?>
                         <li class="nav-item">
@@ -74,14 +74,14 @@ if (empty($_SESSION['id'])) {
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase text-white">Plan du site</h5>
                         <div>
-                            <a href="/view/frontend/home.php" class="text-white">Accueil</a><br/>
-                            <a href="/view/frontend/biographie.php" class="text-white">Biographie</a><br/>
+                            <a href="index.php?action=home.php" class="text-white">Accueil</a><br/>
+                            <a href="index.php?action=biographie.php" class="text-white">Biographie</a><br/>
                         </div>
                     </div>
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase text-white">Admin</h5>
                         <div>
-                            <a href="#" class="text-white">Se connecter</a>
+                            <a href="index.php?action=login" class="text-white">Se connecter</a>
                         </div>
                     </div>
                 </div>
