@@ -7,6 +7,19 @@ class CommentManager extends DbConnect
         // connexion à la BDD exécutée à l'instanciation
         $this->log();
     }
+
+    public function getReported()
+    {
+        $report = false;
+        $query = $this->db->query("SELECT * FROM comments WHERE report = 1");
+        $queryReport = $query->fetch(PDO::FETCH_ASSOC);
+        if ($queryReport)
+        {
+            $report = true;
+        }
+        return $report;
+    }
+
     public function getAll()
     {
         // retourne la liste de tous les commmentaires, et l'article relié
@@ -21,6 +34,7 @@ class CommentManager extends DbConnect
         }
         return $comments;
     }
+
     public function getPosted($id_article)
     {
         // retourne la liste des commentaires publiés sous forme de tableau d'objets
@@ -35,6 +49,7 @@ class CommentManager extends DbConnect
         }
         return $comments;
     }
+
     public function add(Comment $comment)
     {
         $query = $this->db->prepare("INSERT INTO comments(id_article, pseudo, comment,date_report, email, date_comment, report) VALUES(:id_article, :pseudo, :comment, NOW(), 0)");
@@ -44,6 +59,7 @@ class CommentManager extends DbConnect
             'comment' => $comment->getComment()
         ]);
     }
+
     public function accept(Comment $comment)
     {
         $query = $this->db->prepare("UPDATE comments SET report = 0 WHERE id = ?");
@@ -52,6 +68,7 @@ class CommentManager extends DbConnect
         ]);
         return (bool) $result;
     }
+
     public function report(Comment $comment)
     {
         $query = $this->db->prepare("UPDATE comments SET report = 1 WHERE id = ?");
@@ -59,6 +76,7 @@ class CommentManager extends DbConnect
             $comment->getId()
         ]);
     }
+    
     public function delete(Comment $comment)
     {
         $query = $this->db->prepare("DELETE FROM comments WHERE id = ?");
