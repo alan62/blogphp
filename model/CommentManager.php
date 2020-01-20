@@ -24,7 +24,7 @@ class CommentManager extends DbConnect
     {
         // retourne la liste de tous les commmentaires, et l'article relié
         $comments = [];
-        $query = $this->db->query('SELECT id, id_article, pseudo, comment, date_comment, report, email, date_report
+        $query = $this->db->query('SELECT comments.id, id_article, pseudo, comment, date_comment, report, email, date_report
         FROM comments
         INNER JOIN articles ON comments.id_article = articles.id
         ORDER BY report DESC, date_comment DESC');
