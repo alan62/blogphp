@@ -53,5 +53,5 @@ ob_start();
 $content = ob_get_clean(); // fin du contenu de la variable $content
 
 // appel du template
-require('Template.php');
+require ('Template.php');
 ?>

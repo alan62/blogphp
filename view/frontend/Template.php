@@ -57,7 +57,7 @@ if (empty($_SESSION['id'])) {
                     </li>
                     <?php if ($connected) { ?>
                         <li class="nav-item">
-                            <a class="nav-link text-black text-uppercase" href="#"><span class="fas fa-user-circle"></span> Admin</a>
+                            <a class="nav-link text-black text-uppercase" href="index.php?action=admin"><span class="fas fa-user-circle"></span> Admin</a>
                         </li>
                     <?php
                 }
@@ -65,7 +65,7 @@ if (empty($_SESSION['id'])) {
                 </ul>
             </div>
         </nav>
-
+        
         <?= $content ?>
 
         <footer class="footer bg-dark" >

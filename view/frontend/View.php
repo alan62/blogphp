@@ -65,10 +65,6 @@ ob_start();
                         <input type="text" class="form-control" name="form-pseudo" id="form-pseudo" placeholder="Pseudo" required>
                     </div>
                     <div class="form-group">
-                        <label for="form-email" class="text-white">Email</label>
-                        <input type="text" class="form-control" name="form-email" id="form-email" placeholder="Email" required></input>
-                    </div>
-                    <div class="form-group">
                         <label for="form-comment" class="text-white mt-2">Votre commentaire</label>
                         <textarea class="form-control" name="form-comment" id="form-comment" rows="3" placeholder="Commentaire" required></textarea>
                     </div>
@@ -84,5 +80,5 @@ ob_start();
 <?php
 $content = ob_get_clean(); // fin du contenu de la variable $content
 // appel du template
-require 'Template.php';
+require ('Template.php');
 ?>
