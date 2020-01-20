@@ -12,8 +12,9 @@
 }
 
 #bloc-page {
-    background-image: url(https://alanbeaucheron.ovh/projet4/public/images/fond.jpg);
     background-size: cover;
+    background-image: linear-gradient(to right, transparent, rgb(220, 234, 235, 0.4)),
+    url(https://alanbeaucheron.ovh/projet4/public/images/fond.jpg);
 }
 
 article, p {
