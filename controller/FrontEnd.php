@@ -2,7 +2,7 @@
 class Frontend
 {
     // chaque page devient une méthode
-    public function home() 
+    public function Home() 
     {
         $articleManager = new ArticleManager();
         // récupère les articles publiés, par ordre d'apparition
@@ -10,20 +10,37 @@ class Frontend
         require ('view/frontend/Home.php');
     }
 
-    public function biographie() {
+
+    public function Connect()
+    {
+        if (isset($_POST['pseudo']) && isset($_POST['password']))
+        {
+            if (strtolower($_POST['pseudo']) == "jean" && password_verify($_POST['password'], '$2y$10$GXK6BiRmUvKTgRiFksf6UudRh65TVet0M5mj8Rq5bu9I3v4FP6brq'))
+            {
+                $_SESSION['id'] = 1;  
+            }
+        }
+    }
+
+    public function Disconnect()
+    {
+        session_destroy();
+    }
+
+    public function Biographie() {
         require ('view/frontend/Biographie.php');
     }
 
-    public function checkPseudo()
+    public function CheckPseudo()
     {
         require('view/frontend/CheckPseudo.php');
     }
 
-    public function error() {
+    public function Error() {
         require ('view/frontend/Error.php');
     }
 
-    public function inscription()
+    public function Inscription()
     {
         $error = null;
         if (!empty($_POST)) { // si l'utilisateur a posté le formulaire
@@ -86,7 +103,7 @@ class Frontend
         require('view/frontend/inscription.php');
     }
 
-    public function login() {
+    public function Login() {
 
         $error = null;
         if (!empty($_POST)) { // si l'utilisateur a envoyé le formulaire
@@ -129,7 +146,7 @@ class Frontend
         require ('view/frontend/Login.php');
     }
     
-    public function view()
+    public function View()
     {   
         $articleManager = new ArticleManager(); // création de l'Article Manager pour centraliser toutes les requêtes
         $commentManager = new CommentManager(); // création du Comment Manager pour centraliser toutes les requêtes
@@ -173,6 +190,6 @@ class Frontend
         }
         // récupère les commentaires postés sur l'article
         $comments = $commentManager->getPosted($_GET['id']);
-        require('view/frontend/view.php');
+        require('view/frontend/View.php');
     }
 }

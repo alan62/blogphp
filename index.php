@@ -16,8 +16,8 @@ spl_autoload_register(function ($class)
     }
 });
 // on instancie les controller
-$frontend = new frontend();
-$backend = new backend();
+$frontend = new Frontend();
+$backend = new Backend();
 // conditons puis lancement de la méthode du controller choisi
 if (isset($_GET['action']))
 {
@@ -25,7 +25,7 @@ if (isset($_GET['action']))
     // FRONTEND
     if ($_GET['action'] == 'home')
     {
-        $frontend->home();
+        $frontend->Home();
     }
     elseif ($_GET['action'] == 'biographie')
     {
@@ -43,6 +43,14 @@ if (isset($_GET['action']))
     {
         $frontend->Inscription();
     }
+    elseif ($_GET['action'] == 'connect')
+    {
+        $frontend->Connect();
+    }
+    elseif ($_GET['action'] == 'disconnect')
+    {
+        $frontend->Disconnect();
+    }
     // BACKEND
     elseif ($_GET['action'] == 'admin')
     {
@@ -56,6 +64,7 @@ if (isset($_GET['action']))
     {
         $backend->UpdateArticle();
     }
+
     // page error 404
     else 
     {
