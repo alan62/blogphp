@@ -79,6 +79,7 @@ ob_start();
 
 <?php
 $content = ob_get_clean(); // fin du contenu de la variable $content
+$script = '<script src="public/js/comments.js"></script>';
 // appel du template
 require ('Template.php');
 ?>

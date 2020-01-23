@@ -24,7 +24,7 @@ class CommentManager extends DbConnect
     {
         // retourne la liste de tous les commmentaires, et l'article relié
         $comments = [];
-        $query = $this->db->query('SELECT comments.id, id_article, pseudo, comment, date_comment, report, email, date_report
+        $query = $this->db->query('SELECT comments.id, id_article, pseudo, comment, date_comment, report, date_report, email, articles.title 
         FROM comments
         INNER JOIN articles ON comments.id_article = articles.id
         ORDER BY report DESC, date_comment DESC');
@@ -39,7 +39,7 @@ class CommentManager extends DbConnect
     {
         // retourne la liste des commentaires publiés sous forme de tableau d'objets
         $comments = [];
-        $query = $this->db->prepare('SELECT id, id_article, pseudo, comment, date_comment, report FROM comments WHERE id_article = ? ORDER BY report, date_comment DESC');
+        $query = $this->db->prepare('SELECT id, id_article, pseudo, comment, date_comment, report, date_report, email FROM comments WHERE id_article = ? ORDER BY report, date_comment DESC');
         $query->execute([
             $id_article
         ]);
@@ -52,7 +52,7 @@ class CommentManager extends DbConnect
 
     public function add(Comment $comment)
     {
-        $query = $this->db->prepare("INSERT INTO comments(id_article, pseudo, comment,date_report, email, date_comment, report) VALUES(:id_article, :pseudo, :comment, NOW(), 0)");
+        $query = $this->db->prepare("INSERT INTO comments(id, id_article, pseudo, comment, date_report, email, date_comment, report) VALUES(:id_article, :pseudo, :comment, NOW(), 0)");
         $query->execute([
             'id_article' => $comment->getId_article(),
             'pseudo' => $comment->getPseudo(),
