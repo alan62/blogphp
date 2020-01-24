@@ -142,7 +142,7 @@ ob_start();
                         <th scope="row"><?= $comment->getPseudo() ?></th>
                         <td>Publié le <?= date_format(date_create($comment->getDate_comment()), 'd/m/Y à H:i:s') ?></td>
                         <td><?= substr($comment->getComment(), 0, 50) ?><span class="text-muted">[...]</span></td>
-                        <td><?= $comment->getTitle() ?></td>
+                        <td><?= $comment->getPseudo() ?></td>
                         <td><a href="index.php?action=view&id=<?= $comment->getId_article() ?>#comment<?= $comment->getId() ?>" title="Voir le commentaire" class="btn btn-secondary" role="button"><span class="far fa-eye"></span></a></td>
                         <td><?php if ($comment->getReport() > 0) { ?><a href="index.php?action=admin&comment=<?= $comment->getId() ?>&event=accept" title="Accepter le commentaire" class="btn btn-success mb-2" role="button"><span class="fas fa-check"></span></a> <?php } ?><button type="button" title="Supprimer le commentaire" class="btn btn-danger mb-2" data-toggle="modal" data-target="#comment<?= $comment->getId() ?>"><span class="fas fa-trash-alt"></span></a></td>
                     </tr>

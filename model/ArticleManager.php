@@ -65,8 +65,8 @@ class ArticleManager extends DbConnect
         $query = $this->db->prepare("INSERT INTO articles(title, content, date_creation, date_update, on_line) VALUES(?, ?, NOW(), NOW(), ?)");
         $query->execute([
             $article->getTitle(),
-            $article->getOn_line(),
-            $article->getContent()
+            $article->getContent(),
+            $article->getOn_line()
         ]);
     }
 

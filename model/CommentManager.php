@@ -52,12 +52,14 @@ class CommentManager extends DbConnect
 
     public function add(Comment $comment)
     {
-        $query = $this->db->prepare("INSERT INTO comments(id, id_article, pseudo, comment, date_report, email, date_comment, report) VALUES(:id_article, :pseudo, :comment, NOW(), 0)");
+        $query = $this->db->prepare("INSERT INTO comments(id_article, pseudo, comment, date_report, email, date_comment, report) VALUES(:id_article, :pseudo, :comment, NOW(),'',NOW(), 0)");
+        var_dump($this->db->errorInfo());
         $query->execute([
             'id_article' => $comment->getId_article(),
             'pseudo' => $comment->getPseudo(),
             'comment' => $comment->getComment()
         ]);
+        var_dump($this->db->errorInfo());
     }
 
     public function accept(Comment $comment)
