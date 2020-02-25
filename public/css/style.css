@@ -25,7 +25,7 @@ article, p {
 
 
 
-/* Formulaire de contact */
+/* Formulaire de commentaire */
 
 #comments {
     padding-top: 30px;
@@ -85,16 +85,6 @@ article, p {
     margin-top: 56px;
     padding-top: 15%;
 }
-
-
-/* Inscription */ 
-
-#inscription-form {
-    height: 936px;
-    padding-top: 10%;
-}
-
-
 
 /* footer */
 

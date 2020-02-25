@@ -39,13 +39,13 @@ ob_start();
                 <?php foreach ($comments as $comment) { ?>
                     <div class="comment <?php if ($comment->getReport() > 0) { ?> reported<?php } ?>">
                         <div class="row">
-                            <div class="col-md-3">
-                                <p id="comment<?= $comment->getId() ?>" class="mt-3 ml-5"><span id="pseudo-comment"><?= $comment->getPseudo() ?></span><br /><small class="text-muted">Publié le <?= date_format(date_create($comment->getDate_comment()), 'd/m/Y à H:i:s') ?></small></p>
+                            <div class="col-md-4">
+                                <p id="comment<?= $comment->getId() ?>" class="mt-3 mr-3"><span id="pseudo-comment"><?= $comment->getPseudo() ?></span><br /><small class="text-muted">Publié le <?= date_format(date_create($comment->getDate_comment()), 'd/m/Y à H:i:s') ?></small></p>
                             </div>
-                            <div class="col-md-9">
-                                <p id="comment-content" class="mt-3 ml-5 mr-5"> <?= $comment->getComment() ?> </p>
+                            <div class="col-md-8">
+                                <p id="comment-content" class="mt-3 ml-3 mr-3"> <?= $comment->getComment() ?> </p>
                             </div>
-                            <div class="col-2 col-sm-3 col-md-2 ml-5 ml-sm-auto offset-sm-8 offset-md-10 mt-3"><a href="index.php?action=view&comment=<?= $comment->getId() ?>&article=<?= $comment->getId_article() ?>&event=report" class="btn btn-danger btn-sm mr-5<?php if ($comment->getReport() > 0) { ?> disabled" aria-disabled="true" <?php } ?> role="button"><?php if ($comment->getReport() > 0) { ?> Signalé <?php } else { ?> Signaler <?php } ?></a></div>
+                            <div class="col-md-2 mt-1"><a href="index.php?action=view&comment=<?= $comment->getId() ?>&article=<?= $comment->getId_article() ?>&event=report" class="btnreport btn-danger btn-sm mr-5<?php if ($comment->getReport() > 0) { ?> disabled" aria-disabled="true" <?php } ?> role="button"><?php if ($comment->getReport() > 0) { ?> Signalé <?php } else { ?> Signaler <?php } ?></a></div>
                         </div>
                     </div>
                 <?php } ?>
@@ -58,7 +58,7 @@ ob_start();
     <div class="container bg-dark">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 mb-5 mt-5">
-                <h5 class="text-center mt-4 mb-5 text-white">Laisser un commentaire</h5>
+                <h5 class="text-center mt-4 mb-5 text-white">Laissez un commentaire</h5>
                 <form id="form-com" action="index.php?action=view&id=<?= $article->getId() ?>" method="post">
                     <div class="form-group">
                         <label for="form-pseudo" class="text-white">Votre pseudo <span>(moins de 255 caractères)</span></label>
@@ -79,7 +79,7 @@ ob_start();
 
 <?php
 $content = ob_get_clean(); // fin du contenu de la variable $content
-$script = '<script src="public/js/comments.js"></script>';
+
 // appel du template
 require ('Template.php');
 ?>
