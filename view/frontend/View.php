@@ -36,8 +36,14 @@ ob_start();
             <div class="col-lg-10 offset-lg-1 mb-5 mt-5">
                 <h5 class="text-center mt-4 mb-5 text-white">Commentaires</h5>
                 <?php if (empty($comments)) { ?><p class="text-center text-black">Pas de commentaires à afficher. Laissez le vôtre !</p><?php } ?>
-                <?php foreach ($comments as $comment) { ?>
-                    <div class="comment <?php if ($comment->getReport() > 0) { ?> reported<?php } ?>">
+                <?php
+                $CommentEven = false;
+                foreach ($comments as $comment) {
+                    $CommentEven = !$CommentEven;
+                    $cssClass = $comment->getReport() > 0 ? "reported " : "";
+                    $cssClass .= $CommentEven ? "bg-comment" : "" ;
+                    ?>
+                    <div class="comment <?= $cssClass?>">
                         <div class="row">
                             <div class="col-md-4">
                                 <p id="comment<?= $comment->getId() ?>" class="mt-3 mr-3"><span id="pseudo-comment"><?= $comment->getPseudo() ?></span><br /><small class="text-muted">Publié le <?= date_format(date_create($comment->getDate_comment()), 'd/m/Y à H:i:s') ?></small></p>

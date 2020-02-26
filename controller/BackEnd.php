@@ -92,7 +92,7 @@ class Backend
         $reported = $commentManager->getReported();
 
         // récupère les commentaires et leurs options, du plus récent au plus daté, en faisant une jointure pour récupérer le titre de l'article associé
-        $comments = $commentManager->getAll();
+        $comments = $commentManager->getAllReported();
 
         require('view/backend/Admin.php');
     }

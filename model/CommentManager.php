@@ -20,18 +20,20 @@ class CommentManager extends DbConnect
         return $report;
     }
 
-    public function getAll()
+    public function getAllReported()
     {
         // retourne la liste de tous les commmentaires, et l'article relié
         $comments = [];
         $query = $this->db->query('SELECT comments.id, id_article, pseudo, comment, date_comment, report, date_report, email, articles.title 
         FROM comments
         INNER JOIN articles ON comments.id_article = articles.id
-        ORDER BY report DESC, date_comment DESC');
+        WHERE comments.report = 1
+        ORDER BY comments.date_comment DESC');
         while ($data = $query->fetch(PDO::FETCH_ASSOC))
         {
             $comments[] = new Comment($data);
         }
+    
         return $comments;
     }
 

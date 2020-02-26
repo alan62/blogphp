@@ -134,11 +134,15 @@ ob_start();
             </thead>
             <tbody>
                 <?php
-                // on affiche chaque entrée dans une boucle, avec du htmlspecialchars sur les données publiées
+                // on affiche chaque entrée dans une boucle
+                $CommentEven = false;
                 foreach ($comments as $comment) {
+                    $CommentEven = !$CommentEven;
+                    $cssClass = $comment->getReport() > 0 ? "bg-warning " : "";
+                    $cssClass .= $CommentEven ? "bg-comment" : "" ;
                     ?>
                     <!-- on ferme PHP pour la clarté -->
-                    <tr <?php if ($comment->getReport() > 0) { ?> class="bg-warning" <?php } ?>>
+                    <tr class="<?=$cssClass?>" >
                         <th scope="row"><?= $comment->getPseudo() ?></th>
                         <td>Publié le <?= date_format(date_create($comment->getDate_comment()), 'd/m/Y à H:i:s') ?></td>
                         <td><?= substr($comment->getComment(), 0, 50) ?><span class="text-muted">[...]</span></td>
