@@ -133,7 +133,7 @@ class Frontend
                     if ($verifiedPassword) {
                         // si les deux mots de passe correspondent
                         $_SESSION['id'] = $user->getId();
-                        header('Location: index.php?action=admin');
+                        header('Location: index.php?action=Admin');
                     } 
                     else 
                     {
