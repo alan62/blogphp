@@ -32,6 +32,23 @@
             "url": "<?= $ogUrl ?>"
         }
     </script>
+
+    <script src="https://cdn.tiny.cloud/1/al921uoff9lpe9xlpfw90rfmx5u7xwrtoa86anb291elfq7q/tinymce/5/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            language: 'fr_FR',
+            content_css: ['//fonts.googleapis.com/css?family=Exo:300,400,700'],
+            content_style: "#tinymce {font-family: 'Exo', sans-serif !important; font-size: 18px}",
+            browser_spellcheck: true,
+            contextmenu: false,
+            // update validation status on change
+            onchange_callback: function(editor) {
+                tinyMCE.triggerSave();
+                $("#" + editor.id).valid();
+            }
+        });
+    </script>
 </head>
 
 <body>

@@ -19,14 +19,6 @@ if (isset($_GET['action']))
     {
         $frontend->View();
     }
-    elseif ($_GET['action'] == 'inscription')
-    {
-        $frontend->Inscription();
-    }
-    elseif ($_GET['action'] == 'connect')
-    {
-        $frontend->Connect();
-    }
     elseif ($_GET['action'] == 'disconnect')
     {
         $frontend->Disconnect();

@@ -119,7 +119,7 @@ ob_start();
         </table>
     </div>
 
-    <h2 id="admin-title-comment" class="mb-4">Vos commentaires</h2>
+    <h2 id="admin-title-comment" class="mb-4">Vos commentaires signalés</h2>
     <div class="table-responsive">
         <table id="table-comments" class="table table-striped table-admin">
             <thead class="thead-dark">

@@ -12,7 +12,7 @@ ob_start();
      <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 login-content pb-5 px-5">
-                <form id="form-login" action="index.php?action=admin" method="post">
+                <form id="form-login" action="index.php?action=login" method="post">
                     <div class="form-group mt-5">
                         <?php if ($error) { ?>
                             <p class="text-center text-danger mt-3">Mauvais identifiant ou mot de passe. Veuillez réessayer à nouveau.</p>

@@ -66,6 +66,12 @@ article, p {
     margin-top: 2%;
 }
 
+/* COMMENTAIRES */ 
+
+.bg-comment {
+
+    background-color: royalblue;
+}
 
 /* Login */ 
 
