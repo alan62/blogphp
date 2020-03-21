@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL); // rapporte toutes les erreurs php
 ini_set("display_errors", 1);
-
+//echo dirname(__FILE__);
 session_start();
 // enregistre l'autoload
 spl_autoload_register(function ($class)
@@ -9,6 +9,7 @@ spl_autoload_register(function ($class)
     $files = array('controller/' . $class . '.php', 'model/' . $class . '.php');
     foreach ($files as $file)
     {
+        //echo $file;
         if (file_exists($file))
         {
             require_once $file;

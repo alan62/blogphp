@@ -1,4 +1,12 @@
 <?php
+if (empty($_SESSION['id'])) {
+    $connected = false;
+} else {
+    $connected = true;
+}
+?>
+
+<?php
 $title = 'Accueil';
 $metaDescription = "Bienvenue sur le site web de Jean Forteroche, écrivain. Découvrez son nouveau roman \"Billet simple pour l'Alaska\", publié en ligne.";
 $ogUrl = 'https://alanbeaucheron.ovh/projet4/';
@@ -32,8 +40,14 @@ ob_start();
                         <h3><?= $article->getTitle() ?></h3>
                         <p>Publié le <?= date_format(date_create($article->getDate_creation()), 'd/m/Y')  ?></p>
                         <div class="text-justify"><?= substr($article->getContent(), 0, 255) ?>[...]</div>
-                        <a href="index.php?action=view&id=<?= $article->getId() ?>" title="Lire la suite de l'article" class="btn btn-info mb-2" role="button">Lire la suite</a>
                         <hr>
+                        <a href="index.php?action=view&id=<?= $article->getId() ?>" title="Lire la suite de l'article" class="btn btn-info mb-2" role="button">Lire la suite</a>
+                        <?php if ($connected) { ?>
+                        <a href="index.php?action=updateArticle&id=<?= $article->getId() ?>" title="Modifier l'article" class="btn btn-info mb-2" role="button"><span class="fas fa-pen"></span></a>
+                        
+                        <?php 
+                        }
+                        ?>     
                     </article>
                 <?php
             }

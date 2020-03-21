@@ -80,8 +80,11 @@ if (empty($_SESSION['id'])) {
                     </div>
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase text-white">Admin</h5>
+                        <?php if ($connected) { ?>
                         <div>
+                            <a href="index.php?action=admin&session=end" class="text-white">Se déconnecter</a> <?php } else  { ?>
                             <a href="index.php?action=login" class="text-white">Se connecter</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

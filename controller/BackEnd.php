@@ -82,6 +82,9 @@ class Backend
                 {
                     $success = 'Commentaire supprimé !';
                 }
+                if (isset($_GET['article_id']) && $_GET['article_id'] > 0) {
+                    header('Location: index.php?action=view&id='.$_GET['article_id'].'#comments');
+                }
             }
         }
 

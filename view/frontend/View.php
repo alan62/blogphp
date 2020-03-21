@@ -1,4 +1,12 @@
 <?php
+if (empty($_SESSION['id'])) {
+    $connected = false;
+} else {
+    $connected = true;
+}
+?>
+
+<?php
 /* variables à remplir */
 $title = htmlspecialchars($article->getTitle());
 $metaDescription = "Plongez dans l'un des chapitres du nouveau roman interactif de Jean Forteroche, intitulé \"Billet simple pour l'Alaska\" et publié en ligne.";
@@ -52,7 +60,11 @@ ob_start();
                                 <p id="comment-content" class="mt-3 ml-3 mr-3"> <?= $comment->getComment() ?> </p>
                             </div>
                             <div class="col-md-2 mt-1"><a href="index.php?action=view&comment=<?= $comment->getId() ?>&article=<?= $comment->getId_article() ?>&event=report" class="btnreport btn-danger btn-sm mr-5<?php if ($comment->getReport() > 0) { ?> disabled" aria-disabled="true" <?php } ?> role="button"><?php if ($comment->getReport() > 0) { ?> Signalé <?php } else { ?> Signaler <?php } ?></a></div>
+                            <?php if ($connected) { ?>
+                                 <a href="index.php?action=admin&comment=<?= $comment->getId() ?>&event=delete&article_id=<?= $article->getId() ?>" class="btn btn-danger">Supprimer</a>
+                            <?php } ?>
                         </div>
+                        
                     </div>
                 <?php } ?>
             </div>
