@@ -61,7 +61,7 @@ ob_start();
                             </div>
                             <div class="col-md-2 mt-1"><a href="index.php?action=view&comment=<?= $comment->getId() ?>&article=<?= $comment->getId_article() ?>&event=report" class="btnreport btn-danger btn-sm mr-5<?php if ($comment->getReport() > 0) { ?> disabled" aria-disabled="true" <?php } ?> role="button"><?php if ($comment->getReport() > 0) { ?> Signalé <?php } else { ?> Signaler <?php } ?></a></div>
                             <?php if ($connected) { ?>
-                                 <a href="index.php?action=admin&comment=<?= $comment->getId() ?>&event=delete&article_id=<?= $article->getId() ?>" class="btn btn-danger">Supprimer</a>
+                                <div class="col-md-2 mt-1"><a href="index.php?action=admin&comment=<?= $comment->getId() ?>&event=delete&article_id=<?= $article->getId() ?>" class="btndelete btn-danger">Supprimer</a></div>
                             <?php } ?>
                         </div>
                         
