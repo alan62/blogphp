@@ -7,8 +7,7 @@
 /* HOME  */
 #home-header {
     margin-top: 30px;
-    margin-right: 80px;
-    margin-left: 80px;
+    padding-top: 100px;
 }
 
 #bloc-page {
@@ -36,9 +35,8 @@ article, p {
     padding-bottom: 30px;
 }
 
-#view-article {
-    margin-right: 120px;
-    margin-left: 120px;
+#view-header {
+    padding-top: 100px;
 }
 
 #view-header > .container {
@@ -56,12 +54,10 @@ article, p {
 
 
 #biographie-header {
-    padding-top: 65px;
+    padding-top: 130px;
 }
 
 #biographie-article {
-    margin-right: 20%;
-    margin-left: 20%;
     margin-bottom: 6%;
     margin-top: 2%;
 }
@@ -69,8 +65,13 @@ article, p {
 /* COMMENTAIRES */ 
 
 .bg-comment {
+    background-color: #b7b8b9;
+    padding-bottom: 5px ;
+    margin-top: 5px;
+}
 
-    background-color: #007bff;
+.btnReport {
+    margin-top: 5px !important;
 }
 
 /* Login */ 
@@ -96,4 +97,52 @@ article, p {
 
 .footer {
     padding-top: 15px;
+}
+
+/* MEDIA QUERIES */
+/* Ajustement pour les différents écrans */
+
+@media only screen and (min-width:300px) and (max-width: 400px) {
+    #login-form {
+        padding-top: 75%;
+    }
+
+    #table-blogspots {
+        font-size: 10px;
+    }
+
+    tbody  td .btn {
+        font-size: 0.5rem;
+    }
+
+    .table-responsive {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width:401px) and (max-width: 650px) {
+    #login-form {
+        padding-top: 55%;
+    }
+}
+
+
+@media only screen and (min-width:651px) and (max-width: 748px) {
+    #login-form {
+        padding-top: 40%;
+    }
+}
+
+@media only screen and (min-width:749px) and (max-width: 849px) {
+    #login-form {
+        padding-top: 30%;
+    }
+}
+
+
+@media only screen and (min-width:850px) and (max-width: 1024px)
+{
+    #login-form {
+        padding-top: 30%;
+    }
 }

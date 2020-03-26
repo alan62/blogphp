@@ -29,7 +29,7 @@ ob_start();
     </div>
     <div class="container-fluid bg-white pt-5 pb-5">
         <div class="row">
-            <div class="pt-5 pt-md-3 col-5 offset-1 col-md-6 offset-md-3 text-justify article-content text-reader">
+            <div class="pt-5 pt-md-3 col-5 offset-3 col-md-6 offset-md-3 text-justify article-content text-reader">
                 Il est de notoriété publique que Jean Forteroche n'aime guère parler de lui, qui plus est à la troisième personne du singulier.<br />
                 Seulement, dans la mesure où la page que vous parcourez s'intitule sobrement "Biographie", nous serions bien embêtés si je décidais de ne pas honorer le contrat qui vous a précisément amené ici. J'en suis tout à fait capable, n'en doutez pas, cher lecteur avisé. Et je pourrais continuer des heures durant à deviser sur le bien-fondé de ma pudeur, ou encore sur le fameux contrat qui m'oblige à temporairement la souiller. <br />
                 C'est pour cette raison que je m'adresserai à vous comme je m'adresserai à un vieil ami. On a plus grand chose à cacher à un vieil ami, si ce n'est cette part de mystère qui vous rend irrésistiblement intéressant. Car celui qui aime parler de lui suscitera très vite le désintérêt, et celui qui ne dit rien, l'ennui. Distribuer avec minutie les parcelles de son histoire, c'est bien là tout l'art de l'écrivain.<br />
