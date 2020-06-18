@@ -18,22 +18,24 @@ ob_start();
 
 <header id="home-header">
     <div class="jumbotron p-4 p-md-5 text-black rounded bg-transparent">
-    <div class="col-md-12">
-      <h1 class="display-4 text-center"><strong>Billet simple pour l'Alaska</strong></h1>
-      <p class="lead my-3 text-center"><strong>Sur ce site vous aurez la possibilité de lire le roman chapitre par chapitre tout en ayant la possibilité de me donner votre ressenti par commentaire.</strong></p>
-    </div>  
-  </div>
+        <div class="col-md-12">
+            <h1 class="display-4 text-center"><strong>Billet simple pour l'Alaska</strong></h1>
+            <p class="lead my-3 text-center"><strong>Sur ce site vous aurez la possibilité de lire le roman chapitre par chapitre tout en ayant la possibilité de me donner votre ressenti par commentaire.</strong></p>
+        </div>
+    </div>
 </header>
 
 <section id="billet-section">
     <div class="container ">
         <div class="row">
             <div class="col-10 offset-1 mb-2 mt-2">
-                <p class="lead text-black text-justify"><strong>Retrouvez l'ensemble des chapitres qui compose le roman "Billet simple pour l'Alaska", par ordre de publication.<br />
-                    <br />
-                    <u>Le résumé</u> : Deux amis décident de visiter l'Alaska. Pour lire la suite consultez les chapitres.<br />
-                    <br />
-                    Bonne lecture !</strong></p>
+                <p class="lead text-black text-justify">
+                    <strong>Retrouvez l'ensemble des chapitres qui compose le roman "Billet simple pour l'Alaska", par ordre de publication.<br />
+                            <br />
+                            <u>Le résumé</u> : Deux amis décident de visiter l'Alaska. Pour lire la suite consultez les chapitres.<br />
+                            <br />
+                            Bonne lecture !</strong>
+                </p>
                 <hr>
                 <?php foreach ($articles as $article) { ?>
                     <article class="mb-2 mt-2">
@@ -43,15 +45,15 @@ ob_start();
                         <hr>
                         <a href="index.php?action=view&id=<?= $article->getId() ?>" title="Lire la suite de l'article" class="btn btn-info mb-2" role="button">Lire la suite</a>
                         <?php if ($connected) { ?>
-                        <a href="index.php?action=updateArticle&id=<?= $article->getId() ?>" title="Modifier l'article" class="btn btn-info mb-2" role="button"><span class="fas fa-pen"></span></a>
-                        
-                        <?php 
+                            <a href="index.php?action=updateArticle&id=<?= $article->getId() ?>" title="Modifier l'article" class="btn btn-info mb-2" role="button"><span class="fas fa-pen"></span></a>
+
+                        <?php
                         }
-                        ?>     
+                        ?>
                     </article>
                 <?php
-            }
-            ?>
+                }
+                ?>
             </div>
         </div>
 </section>
@@ -59,5 +61,5 @@ ob_start();
 <?php
 $content = ob_get_clean(); // fin du contenu de la variable $content
 // appel du template
-require ('Template.php');
+require('Template.php');
 ?>

@@ -17,7 +17,6 @@ if (empty($_SESSION['id'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- règles CSS et CDN -->
     <link rel="stylesheet" href="public/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Exo:300,400,700|Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
@@ -60,32 +59,32 @@ if (empty($_SESSION['id'])) {
                             <a class="nav-link text-black text-uppercase" href="index.php?action=admin"><span class="fas fa-user-circle"></span> Admin</a>
                         </li>
                     <?php
-                }
-                ?>
+                    }
+                    ?>
                 </ul>
             </div>
         </nav>
-        
+
         <?= $content ?>
 
-        <footer class="footer bg-dark" >
+        <footer class="footer bg-dark">
             <div class="container">
                 <div class="row">
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase text-white">Plan du site</h5>
                         <div>
-                            <a href="index.php?action=home.php" class="text-white">Accueil</a><br/>
-                            <a href="index.php?action=biographie.php" class="text-white">Biographie</a><br/>
+                            <a href="index.php?action=home.php" class="text-white">Accueil</a><br />
+                            <a href="index.php?action=biographie.php" class="text-white">Biographie</a><br />
                         </div>
                     </div>
                     <div class="text-center mb-5 col-8 offset-2 text-md-left col-md-6 offset-md-0">
                         <h5 class="text-uppercase text-white">Admin</h5>
                         <?php if ($connected) { ?>
-                        <div>
-                            <a href="index.php?action=admin&session=end" class="text-white">Se déconnecter</a> <?php } else  { ?>
-                            <a href="index.php?action=login" class="text-white">Se connecter</a>
+                            <div>
+                                <a href="index.php?action=admin&session=end" class="text-white">Se déconnecter</a> <?php } else { ?>
+                                <a href="index.php?action=login" class="text-white">Se connecter</a>
                             <?php } ?>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
