@@ -113,7 +113,7 @@ ob_start();
                     </div>
 
                 <?php // on réouvre PHP avant de finir la boucle
-            }
+                }
             ?>
             </tbody>
         </table>
@@ -139,8 +139,7 @@ ob_start();
                 foreach ($comments as $comment) {
                     $CommentEven = !$CommentEven;
                     $cssClass = $comment->getReport() > 0 ? "bg-warning " : "";
-                    $cssClass .= $CommentEven ? "bg-comment" : "" ;
-                    ?>
+                    $cssClass .= $CommentEven ? "bg-comment" : "" ; ?>
                     <!-- on ferme PHP pour la clarté -->
                     <tr class="<?=$cssClass?>" >
                         <th scope="row"><?= $comment->getPseudo() ?></th>
@@ -168,7 +167,7 @@ ob_start();
                         </div>
                     </div>
                 <?php // on réouvre PHP avant de finir la boucle
-            }
+                }
             ?>
             </tbody>
         </table>

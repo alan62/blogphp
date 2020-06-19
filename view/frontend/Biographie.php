@@ -13,7 +13,6 @@ ob_start();
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="display-4 main-title text-center text-black d-inline-block position-relative"><strong>Jean Forteroche</strong></h1>
-                <h2 class="text-center text-black">Écrivain facétieux, saltimbanque des mots</h2>
             </div>
         </div>
     </div>
@@ -29,6 +28,7 @@ ob_start();
     </div>
     <div class="container-fluid bg-white pt-5 pb-5">
         <div class="row">
+            <h2 class="title-bio text-center text-black">Écrivain facétieux, saltimbanque des mots</h2>
             <div class="pt-5 pt-md-3 col-5 offset-3 col-md-6 offset-md-3 text-justify article-content text-reader">
                 Il est de notoriété publique que Jean Forteroche n'aime guère parler de lui, qui plus est à la troisième personne du singulier.<br />
                 Seulement, dans la mesure où la page que vous parcourez s'intitule sobrement "Biographie", nous serions bien embêtés si je décidais de ne pas honorer le contrat qui vous a précisément amené ici. J'en suis tout à fait capable, n'en doutez pas, cher lecteur avisé. Et je pourrais continuer des heures durant à deviser sur le bien-fondé de ma pudeur, ou encore sur le fameux contrat qui m'oblige à temporairement la souiller. <br />
@@ -49,5 +49,5 @@ ob_start();
 <?php
 $content = ob_get_clean(); // fin du contenu de la variable $content 
 // appel du template
-require ('Template.php');
+require('Template.php');
 ?>

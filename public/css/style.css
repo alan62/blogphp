@@ -62,6 +62,10 @@ article, p {
     margin-top: 2%;
 }
 
+.title-bio {
+    width: 100%;
+}
+
 /* COMMENTAIRES */ 
 
 .bg-comment {

@@ -29,12 +29,13 @@ ob_start();
     <div class="container ">
         <div class="row">
             <div class="col-10 offset-1 mb-2 mt-2">
+                <h2> Retrouvez l'ensemble des chapitres qui compose le roman "Billet simple pour l'Alaska", par ordre de publication.
+                </h2>
                 <p class="lead text-black text-justify">
-                    <strong>Retrouvez l'ensemble des chapitres qui compose le roman "Billet simple pour l'Alaska", par ordre de publication.<br />
-                            <br />
-                            <u>Le résumé</u> : Deux amis décident de visiter l'Alaska. Pour lire la suite consultez les chapitres.<br />
-                            <br />
-                            Bonne lecture !</strong>
+                    <strong>
+                        <u>Le résumé</u> : Deux amis décident de visiter l'Alaska. Pour lire la suite consultez les chapitres.<br />
+                        <br />
+                        Bonne lecture !</strong>
                 </p>
                 <hr>
                 <?php foreach ($articles as $article) { ?>
@@ -56,6 +57,7 @@ ob_start();
                 ?>
             </div>
         </div>
+    </div>
 </section>
 
 <?php
