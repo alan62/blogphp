@@ -86,14 +86,7 @@ class ArticleManager extends DbConnect
         $query = $this->db->prepare("DELETE FROM articles WHERE id = ?");
         $result = $query->execute([
             $article->getId()
-        ]);
-
-        // Suppression des commentaires liés à l'article
-        $query2 = $this->db->prepare("DELETE FROM comments WHERE id_article = ?");
-        $result2 = $query2->execute([
-            $article->getId()
-        ]);
-        
+        ]); 
         return (bool) $result;
     }
 }

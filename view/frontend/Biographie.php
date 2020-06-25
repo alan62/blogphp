@@ -21,7 +21,7 @@ ob_start();
 <article id="biographie-article">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-5 offset-3 col-sm-4 offset-sm-2 col-md-2 offset-md-5 article-picture">
+            <div class="col-5 offset-3 col-sm-4 offset-sm-4 col-md-2 offset-md-5 article-picture">
                 <img src="https://alanbeaucheron.ovh/projet4/public/images/jean.png" class="img-fluid" alt="Photo de Jean Forteroche" />
             </div>
         </div>

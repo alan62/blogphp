@@ -138,14 +138,14 @@ article, p {
 @media only screen and (min-width:651px) and (max-width: 748px) {
     #login-form {
         padding-top: 40%;
-    }
+    }    
 }
 
 @media only screen and (min-width:749px) and (max-width: 849px) {
 
     #login-form {
         padding-top: 30%;
-    }
+    }  
 }
 
 

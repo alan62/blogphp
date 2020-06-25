@@ -1,5 +1,5 @@
 <?php
- $title = 'Admin';
+$title = 'Admin';
 $metaDescription = "Bienvenue sur le tableau de bord du blog de Jean Forteroche, où vous pourrez gérer vos articles et les commentaires.";
 $ogUrl = 'https://alanbeaucheron.ovh/projet4/index.php?action=admin';
 $ogTitle = 'Admin';
@@ -12,7 +12,7 @@ ob_start();
     <div class="jumbotron">
         <div class="d-flex flex-column flex-xl-row flex-wrap justify-content-between align-items-xl-center">
             <div class="d-flex flex-row justify-content-center justify-content-lg-start order-lg-1 order-xl-2 mb-4 mb-xl-0 flex-end">
-                <button type="button" title="Déconnexion" class="btn btn-secondary d-inline-block mr-2" data-toggle="modal" data-target="#end-session"><span class="fas fa-power-off"></button></a><a href="index.php?action=home" class="d-inline-block btn btn-outline-secondary" role="button">Revenir sur le site</a>
+                <button type="button" title="Déconnexion" class="btn btn-secondary d-inline-block mr-2" data-toggle="modal" data-target="#end-session"><span class="fas fa-power-off"></span></button><a href="index.php?action=home" class="d-inline-block btn btn-outline-secondary" role="button">Revenir sur le site</a>
 
                 <!-- Modal du bouton déconnexion -->
                 <div class="modal fade" id="end-session" tabindex="-1" role="dialog" aria-labelledby="se déconnecter de la session" aria-hidden="true">
